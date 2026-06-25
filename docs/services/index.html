@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services &amp; Pricing | Tee (DOT) Nail Bar</title>
+  <meta name="description" content="Manicures, pedicures, custom nail art, press-on nails and omakase services. Clear, transparent pricing with no hidden charges.">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    Free shipping when you spend SGD 80 and above @ Studio! &nbsp;<a href="/studio/">Shop now →</a>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/images/TDNB-raw-logo-cropped.png" alt="Tee (DOT) Nail Bar">
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/" class="active">Services</a></li>
+        <li><a href="/studio/">Studio</a></li>
+        <li><a href="/#design-vault">The Design Vault</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/notices/">Notices</a></li>
+        <li><a href="/terms/">T&amp;Cs</a></li>
+        <li class="nav-cta"><a href="https://www.fresha.com/book-now/kjym092h/all-offer?share&pId=464679" target="_blank" rel="noopener">Book Now</a></li>
+      </ul>
+      <button class="hamburger" onclick="openMenu()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" onclick="closeMenu()">&times;</button>
+    <a href="/" onclick="closeMenu()">Home</a>
+    <a href="/services/" onclick="closeMenu()">Services</a>
+    <a href="/studio/" onclick="closeMenu()">Studio</a>
+    <a href="/#design-vault" onclick="closeMenu()">The Design Vault</a>
+    <a href="/about/" onclick="closeMenu()">About</a>
+    <a href="/blog/" onclick="closeMenu()">Blog</a>
+    <a href="/notices/" onclick="closeMenu()">Notices</a>
+    <a href="/terms/" onclick="closeMenu()">T&amp;Cs</a>
+    <a href="https://www.fresha.com/book-now/kjym092h/all-offer?share&pId=464679" class="btn btn-gold" target="_blank" rel="noopener">Book Now</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <span class="label">Menu</span>
+    <h1>Services &amp; Pricing</h1>
+    <p>Clear, upfront pricing — what you see is what you pay, with no hidden charges. All prices are in SGD.</p>
+  </div>
+
+  <!-- SERVICES -->
+  <section>
+    <div class="container">
+
+      <!-- Tabs -->
+      <div class="services-tabs">
+        <button class="stab active" onclick="showTab('manicure', this)">Manicure</button>
+        <button class="stab" onclick="showTab('pedicure', this)">Pedicure</button>
+        <button class="stab" onclick="showTab('nailart', this)">Nail Art</button>
+        <button class="stab" onclick="showTab('removals', this)">Removals</button>
+        <button class="stab" onclick="showTab('omakase', this)">Omakase</button>
+      </div>
+
+      <!-- MANICURE -->
+      <div class="service-panel active" id="tab-manicure">
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-card-img">
+              <img src="/images/manicure-image.png" alt="Classic Gel Manicure" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3>Classic Gel Manicure</h3>
+              <p>Includes cuticle care &amp; choice of up to 2 colors with gel overlay. Perfect for everyday wear and lasting shine.</p>
+              <div class="price-tag">$50</div>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card-img">
+              <img src="/images/extensions-image.png" alt="Classic Extensions" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3>Classic Extensions</h3>
+              <p>Includes cuticle care &amp; choice of up to 2 colors. Full tip extensions for added length and shape.</p>
+              <div class="price-tag">$70</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PEDICURE -->
+      <div class="service-panel" id="tab-pedicure">
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-card-img">
+              <img src="/images/pedicure-dry-image.png" alt="Classic Gel Pedicure DRY" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3>Classic Gel Pedicure (DRY)</h3>
+              <p>Includes cuticle care &amp; choice of up to 2 colors. A quick and thorough pedicure with gel finish.</p>
+              <div class="price-tag">$50</div>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card-img">
+              <img src="/images/pedicure-full-image.png" alt="Classic Gel Pedicure FULL" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3>Classic Gel Pedicure (FULL)</h3>
+              <p>Includes cuticle care, foot soak &amp; scrub, &amp; choice of up to 2 colors. The full relaxation experience.</p>
+              <div class="price-tag">$60</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NAIL ART -->
+      <div class="service-panel" id="tab-nailart">
+        <div class="art-two-col">
+          <div class="art-table-wrap">
+            <span class="art-section-title">Full Set</span>
+            <table class="art-table">
+              <thead><tr><th>Style</th><th>Price</th></tr></thead>
+              <tbody>
+                <tr><td>Cat-Eye</td><td class="art-price">$8</td></tr>
+                <tr><td>Glitter Ombre</td><td class="art-price">$10</td></tr>
+                <tr><td>Color Ombre</td><td class="art-price">$12</td></tr>
+                <tr><td>Chrome</td><td class="art-price">$15</td></tr>
+                <tr><td>French</td><td class="art-price">$30</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="art-table-wrap">
+            <span class="art-section-title">À La Carte (per nail)</span>
+            <table class="art-table">
+              <thead><tr><th>Style</th><th>From</th></tr></thead>
+              <tbody>
+                <tr><td>Stickers</td><td class="art-price">fr. $1</td></tr>
+                <tr><td>Charms / Gems</td><td class="art-price">fr. $1</td></tr>
+                <tr><td>Metallic Chrome Detailing</td><td class="art-price">fr. $2</td></tr>
+                <tr><td>Marble Design</td><td class="art-price">fr. $5</td></tr>
+                <tr><td>3D Sculpture Art</td><td class="art-price">fr. $8</td></tr>
+                <tr><td>Character Drawing</td><td class="art-price">fr. $10</td></tr>
+                <tr><td>Intricate Drawing</td><td class="art-price">fr. $15</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p style="text-align:center;font-size:13px;color:var(--text-light);margin-top:20px;">À la carte prices are per nail. For other designs, <a href="https://wa.me/6596691882" style="color:var(--gold);font-weight:600;">send us your inspo on WhatsApp</a> for a quote — no surprises at checkout.</p>
+      </div>
+
+      <!-- REMOVALS -->
+      <div class="service-panel" id="tab-removals">
+        <div class="art-table-wrap" style="max-width:600px;margin:0 auto;">
+          <table class="art-table">
+            <thead><tr><th>Service</th><th>Price</th></tr></thead>
+            <tbody>
+              <tr><td>Gel removal only</td><td class="art-price">$5</td></tr>
+              <tr><td>Gel with embellishments</td><td class="art-price">$10</td></tr>
+              <tr><td>Extensions removal only</td><td class="art-price">$20</td></tr>
+              <tr><td>Extensions with embellishments</td><td class="art-price">$25</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="text-align:center;font-size:13px;color:var(--text-light);margin-top:16px;">Standalone removal (without another service): +$10<br><strong style="color:var(--text-mid);">Standalone removals are only applicable to nails done by Tee (DOT) Nail Bar.</strong><br>Acrylic nail removals are not available. Final pricing confirmed at appointment.</p>
+      </div>
+
+      <!-- OMAKASE -->
+      <div class="service-panel" id="tab-omakase">
+        <div class="omakase-card">
+          <div>
+            <span class="label" style="color:var(--gold);">Signature Service</span>
+            <h3>Omakase Nails</h3>
+            <p>Tell us your budget and trust us to design something completely unique. No inspo needed, no repeated designs. Ever.</p>
+            <div class="omakase-price">
+              <div>
+                <div class="price-val">$68</div>
+                <div style="font-size:11px;color:rgba(255,255,255,0.5)">Base tier</div>
+              </div>
+              <div style="color:rgba(255,255,255,0.3);font-size:1.5rem">or</div>
+              <div>
+                <div class="price-val">$88</div>
+                <div style="font-size:11px;color:rgba(255,255,255,0.5)">Premium tier</div>
+              </div>
+            </div>
+            <p style="font-size:12px;">Extensions: +$30 &nbsp;·&nbsp; Includes Classic Gel Manicure and overlay</p>
+            <a href="https://wa.me/6596691882?text=Hi!%20I'm%20interested%20in%20the%20Omakase%20nail%20service%20" class="btn btn-gold" style="margin-top:24px;" target="_blank" rel="noopener">Enquire via WhatsApp</a>
+          </div>
+          <ul class="omakase-points">
+            <li>Exclusively for clients who trust us to deliver a fully creative service</li>
+            <li>Number of nail art nails varies depending on budget &amp; design complexity</li>
+            <li>Each set is uniquely designed — no repeated designs</li>
+            <li>Final pricing confirmed during the appointment</li>
+            <li>Perfect for events, celebrations, or when you want something special</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BEFORE YOU BOOK -->
+      <div class="book-notice">
+        <h3>Before You Book — Good to Know</h3>
+        <div class="notice-grid">
+          <div class="notice-item">
+            <div class="notice-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <strong>Bring Inspo Photos</strong>
+            <p>Send reference images for nail art via WhatsApp before your appointment for an accurate price quote.</p>
+          </div>
+          <div class="notice-item">
+            <div class="notice-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <strong>Strictly By Appointment</strong>
+            <p>Walk-ins are not accepted. Check available time slots on Instagram before booking.</p>
+          </div>
+          <div class="notice-item">
+            <div class="notice-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </div>
+            <strong>Deposit Required</strong>
+            <p>A deposit is required to confirm your booking. You are deemed agreeable to all T&amp;Cs upon payment.</p>
+          </div>
+          <div class="notice-item">
+            <div class="notice-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <strong>Home-Based Studio</strong>
+            <p>We are home-based in Sembawang. The unit number is provided only after your booking is confirmed.</p>
+          </div>
+        </div>
+        <p style="font-size:12px;color:var(--text-light);margin-top:20px;">
+          Full T&amp;Cs: <a href="/terms/" style="color:var(--gold);font-weight:600;">View T&amp;Cs</a>
+          &nbsp;·&nbsp;
+          Festive bookings: <a href="/notices/" style="color:var(--gold);font-weight:600;">See Notice page</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING CTA -->
+  <section class="booking-section">
+    <div class="container">
+      <span class="label" style="display:block;margin-bottom:12px;">Ready?</span>
+      <h2>Book your appointment</h2>
+      <p>Weekdays 11am–7pm (last appt) · Weekends 11am–5pm (last appt)</p>
+      <div class="booking-options">
+        <a href="https://www.fresha.com/book-now/kjym092h/all-offer?share&pId=464679" class="btn btn-gold" target="_blank" rel="noopener">Book Online (Fresha)</a>
+        <a href="https://wa.me/6596691882?text=Hi!%20I'd%20like%20to%20enquire%20about%20booking%20a%20nail%20appointment%20" class="btn" style="background:rgba(255,255,255,0.1);color:#fff;border:1.5px solid rgba(255,255,255,0.2);" target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2018–2025 Tee (DOT) Nail Bar · Sembawang, Singapore</p>
+    <p style="margin-top:8px;">
+      <a href="/">Home</a> &nbsp;·&nbsp;
+      <a href="/services/">Services</a> &nbsp;·&nbsp;
+      <a href="/studio/">Studio</a> &nbsp;·&nbsp;
+      <a href="/about/">About</a> &nbsp;·&nbsp;
+      <a href="/blog/">Blog</a> &nbsp;·&nbsp;
+      <a href="/notices/">Notices</a> &nbsp;·&nbsp;
+      <a href="/terms/">T&amp;Cs</a> &nbsp;·&nbsp;
+      <a href="https://instagram.com/teedotnailbar" target="_blank" rel="noopener">Instagram</a>
+    </p>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a class="wa-float" href="https://wa.me/6596691882?text=Hi!%20I'd%20like%20to%20enquire%20about%20booking%20a%20nail%20appointment%20" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.544 4.056 1.492 5.765L0 24l6.374-1.467A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.782 9.782 0 01-5.007-1.378l-.36-.214-3.721.856.878-3.623-.237-.373A9.781 9.781 0 012.182 12C2.182 6.59 6.59 2.182 12 2.182S21.818 6.59 21.818 12 17.41 21.818 12 21.818z"/></svg>
+  </a>
+
+  <script>
+    function openMenu() { document.getElementById('mobileMenu').classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); document.body.style.overflow=''; }
+    function showTab(id, el) {
+      document.querySelectorAll('.service-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.stab').forEach(t => t.classList.remove('active'));
+      document.getElementById('tab-' + id).classList.add('active');
+      el.classList.add('active');
+    }
+  </script>
+</body>
+</html>

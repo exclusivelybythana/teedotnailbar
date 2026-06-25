@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Tee (DOT) Nail Bar</title>
+  <meta name="description" content="Nail tips, care guides, and behind-the-scenes from Tee (DOT) Nail Bar — home-based nail salon in Sembawang, Singapore.">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+    .blog-card-img {
+      height: 180px;
+      overflow: hidden;
+    }
+    .blog-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .blog-card-body {
+      padding: 22px 22px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .blog-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 50px;
+      background: var(--cream-mid);
+      color: var(--gold-dark);
+    }
+    .blog-date { font-size: 11px; color: var(--text-light); }
+    .blog-views { font-size: 11px; color: var(--text-light); }
+    .blog-card h3 {
+      font-size: 1.05rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .blog-card p {
+      font-size: 13.5px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      flex: 1;
+    }
+    .blog-read-more {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 4px;
+    }
+    .blog-read-more:hover { color: var(--gold-dark); }
+
+    /* Featured post */
+    .blog-featured {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 40px;
+      transition: box-shadow 0.2s;
+      text-decoration: none;
+    }
+    .blog-featured:hover { box-shadow: var(--shadow-hover); }
+    .blog-featured-img {
+      height: 340px;
+      overflow: hidden;
+    }
+    .blog-featured-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .blog-featured-body {
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+    }
+    .blog-featured-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .blog-featured-body h2 {
+      font-size: 1.6rem;
+      line-height: 1.3;
+      color: var(--text);
+    }
+    .blog-featured-body p {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.8;
+    }
+    .blog-featured-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .blog-featured-meta .blog-tag { background: var(--cream-mid); }
+    .blog-featured-meta .blog-date { font-size: 12px; color: var(--text-light); }
+    .blog-featured-meta .blog-views { font-size: 12px; color: var(--text-light); }
+
+    @media (max-width: 900px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-featured { grid-template-columns: 1fr; }
+      .blog-featured-img { height: 220px; }
+      .blog-featured-body { padding: 28px 24px; }
+    }
+    @media (max-width: 640px) {
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    Free shipping when you spend SGD 80 and above @ Studio! &nbsp;<a href="/studio/">Shop now →</a>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/images/TDNB-raw-logo-cropped.png" alt="Tee (DOT) Nail Bar">
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/studio/">Studio</a></li>
+        <li><a href="/#design-vault">The Design Vault</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/notices/">Notices</a></li>
+        <li><a href="/terms/">T&amp;Cs</a></li>
+        <li class="nav-cta"><a href="https://www.fresha.com/book-now/kjym092h/all-offer?share&pId=464679" target="_blank" rel="noopener">Book Now</a></li>
+      </ul>
+      <button class="hamburger" onclick="openMenu()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" onclick="closeMenu()">&times;</button>
+    <a href="/" onclick="closeMenu()">Home</a>
+    <a href="/services/" onclick="closeMenu()">Services</a>
+    <a href="/studio/" onclick="closeMenu()">Studio</a>
+    <a href="/#design-vault" onclick="closeMenu()">The Design Vault</a>
+    <a href="/about/" onclick="closeMenu()">About</a>
+    <a href="/blog/" onclick="closeMenu()">Blog</a>
+    <a href="/notices/" onclick="closeMenu()">Notices</a>
+    <a href="/terms/" onclick="closeMenu()">T&amp;Cs</a>
+    <a href="https://www.fresha.com/book-now/kjym092h/all-offer?share&pId=464679" class="btn btn-gold" target="_blank" rel="noopener">Book Now</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <span class="label">From the Studio</span>
+    <h1>Blog</h1>
+    <p>Nail tips, care guides, behind-the-scenes, and everything in between from Tee (DOT) Nail Bar.</p>
+  </div>
+
+  <!-- BLOG CONTENT -->
+  <section>
+    <div class="container">
+
+      <!-- Featured Post: Wedding Nails (most viewed) -->
+      <a href="/blog/wedding-nails/" class="blog-featured fade-in" style="text-decoration:none;">
+        <div class="blog-featured-img">
+          <img src="/images/blog-header-wedding-nails.jpg" alt="Wedding nails ideas for brides">
+        </div>
+        <div class="blog-featured-body">
+          <span class="blog-featured-label">Most Popular</span>
+          <div class="blog-featured-meta">
+            <span class="blog-tag">Bridal</span>
+            <span class="blog-date">20 Jun 2024</span>
+            <span class="blog-views">· 132 views</span>
+          </div>
+          <h2>10 Wedding Nail Ideas for Every Bride</h2>
+          <p>From matching your dress colour to drawing inspo from your bouquet and jewellery — ten creative ways to find the perfect bridal nail design for your big day.</p>
+          <span class="blog-read-more">Read more →</span>
+        </div>
+      </a>
+
+      <!-- Post Grid -->
+      <div class="blog-grid">
+
+        <div class="blog-card fade-in">
+          <div class="blog-card-img"><img src="/images/blog-header-color-psychology.png" alt="Colour psychology for nails"></div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="blog-tag">Inspiration</span>
+              <span class="blog-date">25 Nov 2024</span>
+              <span class="blog-views">· 7 views</span>
+            </div>
+            <h3>Colour Psychology: Choosing a Nail Colour That Reflects Your Mood</h3>
+            <p>The colour on your nails says more than you think. From confident reds to calming blues, find out what each shade signals — and how to pick one that matches your vibe.</p>
+            <a href="/blog/color-psychology/" class="blog-read-more">Read more →</a>
+          </div>
+        </div>
+
+        <div class="blog-card fade-in">
+          <div class="blog-card-img"><img src="/images/blog-header-nail-makeover.png" alt="5 signs it is time for a nail makeover"></div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="blog-tag">Nail Care</span>
+              <span class="blog-date">6 Nov 2024</span>
+              <span class="blog-views">· 22 views</span>
+            </div>
+            <h3>5 Signs It's Time for a Nail Makeover</h3>
+            <p>Chipped polish? Same colour for months? Feeling in a rut? Here are five clear signs it's time to book an appointment and try something fresh.</p>
+            <a href="/blog/nail-makeover/" class="blog-read-more">Read more →</a>
+          </div>
+        </div>
+
+        <div class="blog-card fade-in">
+          <div class="blog-card-img"><img src="/images/blog-header-nail-shapes.png" alt="Ultimate guide to nail shapes"></div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="blog-tag">Nail Guide</span>
+              <span class="blog-date">3 Nov 2024</span>
+              <span class="blog-views">· 39 views</span>
+            </div>
+            <h3>The Ultimate Guide to Nail Shapes</h3>
+            <p>Round, almond, stiletto, coffin — there are 8 popular nail shapes, and the right one depends on your lifestyle, finger type, and personality. Here's how to choose.</p>
+            <a href="/blog/nail-shapes/" class="blog-read-more">Read more →</a>
+          </div>
+        </div>
+
+        <div class="blog-card fade-in">
+          <div class="blog-card-img"><img src="/images/blog-header-about-us.png" alt="Welcome to Tee (DOT) Nail Bar"></div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="blog-tag">About Us</span>
+              <span class="blog-date">13 Jun 2024</span>
+              <span class="blog-views">· 15 views</span>
+            </div>
+            <h3>Welcome to Tee (DOT) Nail Bar — Singapore's Cosiest Home-Based Nail Salon</h3>
+            <p>Recognised as one of Sembawang's ThreeBestRated nail salons — here's what makes us different, what we offer, and why our clients keep coming back.</p>
+            <a href="/blog/about-us/" class="blog-read-more">Read more →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="booking-section">
+    <div class="container">
+      <span class="label" style="display:block;margin-bottom:12px;">Book your next set</span>
+      <h2>Ready for fresh nails?</h2>
+      <p>Check Instagram for available slots, then book online or drop a WhatsApp.</p>
+      <div class="booking-options">
+        <a href="https://www.fresha.com/book-now/kjym092h/all-offer?share&pId=464679" class="btn btn-gold" target="_blank" rel="noopener">Book on Fresha</a>
+        <a href="https://wa.me/6596691882?text=Hi!%20I'd%20like%20to%20enquire%20about%20a%20nail%20appointment%20" class="btn" style="background:rgba(255,255,255,0.1);color:#fff;border:1.5px solid rgba(255,255,255,0.2);" target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2018–2025 Tee (DOT) Nail Bar · Sembawang, Singapore</p>
+    <p style="margin-top:8px;">
+      <a href="/">Home</a> &nbsp;·&nbsp;
+      <a href="/services/">Services</a> &nbsp;·&nbsp;
+      <a href="/studio/">Studio</a> &nbsp;·&nbsp;
+      <a href="/about/">About</a> &nbsp;·&nbsp;
+      <a href="/blog/">Blog</a> &nbsp;·&nbsp;
+      <a href="/notices/">Notices</a> &nbsp;·&nbsp;
+      <a href="/terms/">T&amp;Cs</a> &nbsp;·&nbsp;
+      <a href="https://instagram.com/teedotnailbar" target="_blank" rel="noopener">Instagram</a>
+    </p>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a class="wa-float" href="https://wa.me/6596691882?text=Hi!%20I'd%20like%20to%20enquire%20about%20booking%20a%20nail%20appointment%20" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.544 4.056 1.492 5.765L0 24l6.374-1.467A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.782 9.782 0 01-5.007-1.378l-.36-.214-3.721.856.878-3.623-.237-.373A9.781 9.781 0 012.182 12C2.182 6.59 6.59 2.182 12 2.182S21.818 6.59 21.818 12 17.41 21.818 12 21.818z"/></svg>
+  </a>
+
+  <script>
+    function openMenu() { document.getElementById('mobileMenu').classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); document.body.style.overflow=''; }
+    window.addEventListener('scroll', () => {
+      document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 10);
+    });
+    const observer = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

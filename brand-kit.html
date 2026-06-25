@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tee (DOT) Nail Bar — Brand Kit</title>
+<style>
+@font-face {
+  font-family: 'TAN Aegean';
+  src: url('TAN - AEGEAN Regular.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Buffalo';
+  src: url('Buffalo.otf') format('opentype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noah';
+  src: url('noah-regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --gold: #c9a96e;
+  --gold-dark: #a8834a;
+  --cream: #faf8f5;
+  --cream-mid: #f0ebe4;
+  --cream-deep: #e8d5c4;
+  --text: #1a1a1a;
+  --text-mid: #4a4a4a;
+  --text-light: #7a7a7a;
+  --white: #ffffff;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noah', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- PAGE STRUCTURE ---- */
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+/* ---- SECTION HEADINGS ---- */
+.section-label {
+  font-family: 'Noah', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.section-title {
+  font-family: 'TAN Aegean', serif;
+  font-size: 1.6rem;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+hr.divider {
+  border: none;
+  border-top: 1px solid var(--cream-deep);
+  margin: 56px 0;
+}
+
+/* ---- COVER ---- */
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 0 48px;
+  border-bottom: 1px solid var(--cream-deep);
+  margin-bottom: 56px;
+}
+
+.cover-logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 32px;
+}
+
+.cover h1 {
+  font-family: 'TAN Aegean', serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.cover-sub {
+  font-family: 'Buffalo', cursive;
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.cover-desc {
+  color: var(--text-mid);
+  font-size: 13px;
+  max-width: 440px;
+  line-height: 1.7;
+}
+
+/* ---- LOGO SECTION ---- */
+.logo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.logo-box {
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 32px 20px 20px;
+  gap: 16px;
+}
+
+.logo-box.on-cream { background: var(--cream-mid); }
+.logo-box.on-white { background: var(--white); border: 1px solid var(--cream-deep); }
+.logo-box.on-dark  { background: var(--text); }
+
+.logo-box img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+
+/* white logo on dark = CSS invert trick */
+.logo-box.on-dark img { filter: brightness(0) invert(1); }
+
+.logo-box-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+.logo-box.on-dark .logo-box-label { color: rgba(255,255,255,0.45); }
+
+/* ---- COLOR PALETTE ---- */
+.palette {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.swatch {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.swatch-block {
+  height: 100px;
+}
+
+.swatch-info {
+  background: var(--white);
+  padding: 14px 14px 16px;
+}
+
+.swatch-name {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.swatch-hex {
+  font-size: 11px;
+  color: var(--text-light);
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.05em;
+}
+
+.swatch-role {
+  font-size: 10px;
+  color: var(--text-light);
+  margin-top: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ---- TYPOGRAPHY ---- */
+.type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.type-card {
+  background: var(--white);
+  border: 1px solid var(--cream-deep);
+  border-radius: 12px;
+  padding: 28px 24px;
+}
+
+.type-card-tag {
+  display: inline-block;
+  background: var(--cream-mid);
+  color: var(--text-mid);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  padding: 4px 10px;
+  margin-bottom: 20px;
+}
+
+.type-specimen {
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--cream-deep);
+  padding-bottom: 20px;
+}
+
+.type-meta {
+  font-size: 11px;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.type-meta strong {
+  color: var(--text-mid);
+  font-weight: 600;
+}
+
+/* ---- TONE SPECIMENS ---- */
+.aegean-heading {
+  font-family: 'TAN Aegean', serif;
+  font-size: 1.9rem;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.buffalo-heading {
+  font-family: 'Buffalo', cursive;
+  font-size: 2rem;
+  color: var(--gold);
+  line-height: 1.2;
+}
+
+.noah-body {
+  font-family: 'Noah', sans-serif;
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+/* ---- UI ELEMENTS ---- */
+.elements-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.element-card {
+  background: var(--white);
+  border: 1px solid var(--cream-deep);
+  border-radius: 12px;
+  padding: 28px 24px;
+}
+
+.element-card-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--cream-mid);
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: default;
+  border: none;
+  font-family: 'Noah', sans-serif;
+}
+.btn-gold    { background: var(--gold); color: var(--white); }
+.btn-outline { background: transparent; color: var(--text); border: 1.5px solid var(--cream-deep); }
+.btn-dark    { background: var(--text); color: var(--white); }
+
+.label-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.type-hierarchy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.h-sample-1 { font-family: 'TAN Aegean', serif; font-size: 1.4rem; color: var(--text); }
+.h-sample-2 { font-family: 'TAN Aegean', serif; font-size: 1.1rem; color: var(--text); }
+.h-sample-3 { font-family: 'TAN Aegean', serif; font-size: 0.95rem; color: var(--text); }
+.h-sample-body { font-family: 'Noah', sans-serif; font-size: 13px; color: var(--text-mid); }
+.h-sample-small { font-family: 'Noah', sans-serif; font-size: 11px; color: var(--text-light); letter-spacing: 0.02em; }
+
+.tone-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tone-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tone-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tone-word {
+  font-size: 13px;
+  color: var(--text-mid);
+}
+
+/* ---- IMAGERY ---- */
+.imagery-section {}
+
+.banner-preview {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  height: 260px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.banner-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(250,248,245,0.45);
+  gap: 8px;
+}
+
+.banner-overlay-heading {
+  font-family: 'TAN Aegean', serif;
+  font-size: 2rem;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.banner-overlay-script {
+  font-family: 'Buffalo', cursive;
+  font-size: 1.1rem;
+  color: var(--gold-dark);
+}
+
+.imagery-notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.imagery-note {
+  background: var(--white);
+  border: 1px solid var(--cream-deep);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.imagery-note-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.imagery-note p {
+  font-size: 12px;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+/* ---- FOOTER ---- */
+.kit-footer {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--cream-deep);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.kit-footer-brand {
+  font-family: 'TAN Aegean', serif;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.kit-footer-meta {
+  font-size: 11px;
+  color: var(--text-light);
+  text-align: right;
+}
+
+@media print {
+  body { background: white; }
+  .page { padding: 20px; }
+}
+
+@media (max-width: 720px) {
+  .logo-grid, .palette, .type-grid, .elements-grid { grid-template-columns: 1fr 1fr; }
+  .cover h1 { font-size: 1.8rem; }
+}
+
+@media (max-width: 480px) {
+  .palette { grid-template-columns: 1fr 1fr; }
+  .logo-grid, .type-grid, .elements-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- COVER -->
+  <div class="cover">
+    <img class="cover-logo" src="images/TDNB-Main-Logo.png" alt="Tee (DOT) Nail Bar Logo">
+    <h1>Tee (DOT) Nail Bar</h1>
+    <div class="cover-sub">by Thana · since 2018</div>
+    <p class="cover-desc">Brand identity reference — colours, typography, logo usage, and UI elements. Keep these consistent across all touchpoints.</p>
+  </div>
+
+  <!-- LOGO -->
+  <div class="section-label">01 — Logo</div>
+  <div class="section-title">Logo Usage</div>
+  <div class="logo-grid">
+    <div class="logo-box on-cream">
+      <img src="images/TDNB-Main-Logo.png" alt="Logo on cream">
+      <span class="logo-box-label">On Cream</span>
+    </div>
+    <div class="logo-box on-white">
+      <img src="images/TDNB-Main-Logo.png" alt="Logo on white">
+      <span class="logo-box-label">On White</span>
+    </div>
+    <div class="logo-box on-dark">
+      <img src="images/TDNB-Main-Logo.png" alt="Logo on dark">
+      <span class="logo-box-label">On Dark</span>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- COLOURS -->
+  <div class="section-label">02 — Colour</div>
+  <div class="section-title">Palette</div>
+  <div class="palette">
+
+    <div class="swatch">
+      <div class="swatch-block" style="background:#c9a96e;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Gold</div>
+        <div class="swatch-hex">#c9a96e</div>
+        <div class="swatch-role">Primary accent</div>
+      </div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-block" style="background:#a8834a;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Gold Dark</div>
+        <div class="swatch-hex">#a8834a</div>
+        <div class="swatch-role">Hover / depth</div>
+      </div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-block" style="background:#faf8f5; border:1px solid #e8d5c4;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Cream</div>
+        <div class="swatch-hex">#faf8f5</div>
+        <div class="swatch-role">Page background</div>
+      </div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-block" style="background:#f0ebe4;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Cream Mid</div>
+        <div class="swatch-hex">#f0ebe4</div>
+        <div class="swatch-role">Alt sections</div>
+      </div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-block" style="background:#e8d5c4;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Cream Deep</div>
+        <div class="swatch-hex">#e8d5c4</div>
+        <div class="swatch-role">Borders / dividers</div>
+      </div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-block" style="background:#1a1a1a;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Charcoal</div>
+        <div class="swatch-hex">#1a1a1a</div>
+        <div class="swatch-role">Primary text / nav</div>
+      </div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-block" style="background:#4a4a4a;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Text Mid</div>
+        <div class="swatch-hex">#4a4a4a</div>
+        <div class="swatch-role">Body copy</div>
+      </div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-block" style="background:#7a7a7a;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Text Light</div>
+        <div class="swatch-hex">#7a7a7a</div>
+        <div class="swatch-role">Captions / meta</div>
+      </div>
+    </div>
+
+    <div class="swatch">
+      <div class="swatch-block" style="background:#ffffff; border:1px solid #e8d5c4;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">White</div>
+        <div class="swatch-hex">#ffffff</div>
+        <div class="swatch-role">Cards / overlays</div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="divider">
+
+  <!-- TYPOGRAPHY -->
+  <div class="section-label">03 — Typography</div>
+  <div class="section-title">Typefaces</div>
+  <div class="type-grid">
+
+    <div class="type-card">
+      <span class="type-card-tag">Headings</span>
+      <div class="type-specimen">
+        <div class="aegean-heading">The art of the perfect nail.</div>
+      </div>
+      <div class="type-meta">
+        <strong>TAN Aegean</strong><br>
+        Refined serif — used for all H1, H2, H3 and section titles. Sets an editorial, high-end tone.
+      </div>
+    </div>
+
+    <div class="type-card">
+      <span class="type-card-tag">Accent / Script</span>
+      <div class="type-specimen">
+        <div class="buffalo-heading">by Thana</div>
+      </div>
+      <div class="type-meta">
+        <strong>Buffalo</strong><br>
+        Handwritten script — reserved for the brand tagline, personal touches, and pull-quotes. Use sparingly.
+      </div>
+    </div>
+
+    <div class="type-card">
+      <span class="type-card-tag">Body</span>
+      <div class="type-specimen">
+        <div class="noah-body">Crafted with intention, every appointment at Tee (DOT) is a moment designed just for you.</div>
+      </div>
+      <div class="type-meta">
+        <strong>Noah Regular</strong><br>
+        Clean geometric sans-serif — used for all body copy, navigation, buttons, and UI labels. Base size 14–15px.
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="divider">
+
+  <!-- UI ELEMENTS -->
+  <div class="section-label">04 — Elements</div>
+  <div class="section-title">UI Components</div>
+  <div class="elements-grid">
+
+    <div class="element-card">
+      <div class="element-card-title">Buttons</div>
+      <div class="btn-row">
+        <span class="btn btn-gold">Book Now</span>
+        <span class="btn btn-outline">View Services</span>
+      </div>
+      <div class="btn-row" style="margin-top:10px;">
+        <span class="btn btn-dark">Learn More</span>
+      </div>
+    </div>
+
+    <div class="element-card">
+      <div class="element-card-title">Type Hierarchy</div>
+      <div class="type-hierarchy">
+        <div class="h-sample-1">Heading One (H1)</div>
+        <div class="h-sample-2">Heading Two (H2)</div>
+        <div class="h-sample-3">Heading Three (H3)</div>
+        <div class="h-sample-body">Body copy — Noah Regular, 14px, #4a4a4a</div>
+        <div class="h-sample-small">Caption · Meta text · 11px</div>
+      </div>
+    </div>
+
+    <div class="element-card">
+      <div class="element-card-title">Labels &amp; Tags</div>
+      <div style="display:flex; flex-direction:column; gap:16px; margin-top:4px;">
+        <div>
+          <div class="label-tag">Services</div>
+          <div style="font-size:11px; color:var(--text-light); margin-top:6px;">Section label — 10px, uppercase, tracked, gold</div>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <span style="background:var(--cream-mid); color:var(--text-mid); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; border-radius:50px; padding:4px 12px;">Manicure</span>
+          <span style="background:var(--gold); color:white; font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; border-radius:50px; padding:4px 12px;">Active</span>
+          <span style="background:var(--text); color:white; font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; border-radius:50px; padding:4px 12px;">New</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="element-card">
+      <div class="element-card-title">Brand Tone</div>
+      <div class="tone-strip">
+        <div class="tone-item"><div class="tone-dot" style="background:var(--gold);"></div><span class="tone-word">Elevated — not intimidating</span></div>
+        <div class="tone-item"><div class="tone-dot" style="background:var(--gold);"></div><span class="tone-word">Personal — not casual</span></div>
+        <div class="tone-item"><div class="tone-dot" style="background:var(--gold);"></div><span class="tone-word">Editorial — not corporate</span></div>
+        <div class="tone-item"><div class="tone-dot" style="background:var(--gold);"></div><span class="tone-word">Warm — not precious</span></div>
+        <div class="tone-item"><div class="tone-dot" style="background:var(--gold);"></div><span class="tone-word">Precise — not minimal</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="divider">
+
+  <!-- IMAGERY -->
+  <div class="section-label">05 — Imagery</div>
+  <div class="section-title">Brand Texture &amp; Photography</div>
+  <div class="imagery-section">
+
+    <div class="banner-preview">
+      <img src="main-banner-bg.png" alt="Brand hero banner — soft white feather texture">
+      <div class="banner-overlay">
+        <div class="banner-overlay-heading">Tee (DOT) Nail Bar</div>
+        <div class="banner-overlay-script">by Thana · since 2018</div>
+      </div>
+    </div>
+
+    <div class="imagery-notes">
+      <div class="imagery-note">
+        <div class="imagery-note-title">Hero Texture</div>
+        <p>Soft white feather / fur texture used as the primary hero background. Conveys warmth, softness, and luxury without colour distraction.</p>
+      </div>
+      <div class="imagery-note">
+        <div class="imagery-note-title">Photography Style</div>
+        <p>Bright, neutral-toned imagery with warm cream and white tones. Avoid harsh shadows or oversaturated colours — keep the palette soft and refined.</p>
+      </div>
+      <div class="imagery-note">
+        <div class="imagery-note-title">Overlay Approach</div>
+        <p>Semi-transparent cream overlay (#faf8f5 at 40–50% opacity) applied over imagery to keep text legible while preserving the background texture.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="kit-footer">
+    <div class="kit-footer-brand">Tee (DOT) Nail Bar</div>
+    <div class="kit-footer-meta">Brand Kit · by Thana · since 2018<br>For internal use — teedotnailbar.com</div>
+  </div>
+
+</div>
+</body>
+</html>

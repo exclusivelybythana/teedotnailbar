@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notices | Tee (DOT) Nail Bar</title>
+  <meta name="description" content="Latest notices and announcements from Tee (DOT) Nail Bar — schedule updates, festive closures, policy reminders and more.">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .notice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .notice-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .notice-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+    .notice-card.pinned {
+      border-top: 3px solid var(--gold);
+    }
+    .notice-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .notice-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 50px;
+    }
+    .notice-tag.policy    { background: #fdefd0; color: #8a5a00; }
+    .notice-tag.schedule  { background: #e8f0fe; color: #1a56db; }
+    .notice-tag.update    { background: #eafaf1; color: #0e6b45; }
+    .notice-tag.studio    { background: #f3e8ff; color: #6d28d9; }
+    .notice-date {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+    .notice-pin {
+      margin-left: auto;
+      font-size: 14px;
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+    }
+    .notice-card h3 {
+      font-size: 1.05rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .notice-card p {
+      font-size: 13.5px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      flex: 1;
+    }
+    .notice-card .notice-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .notice-card .notice-link:hover { color: var(--gold-dark); }
+    .notice-empty {
+      text-align: center;
+      padding: 60px 24px;
+      color: var(--text-light);
+    }
+    .notice-empty p { font-size: 14px; margin-top: 8px; }
+    .notice-subscribe {
+      background: var(--text);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 40px 36px;
+      text-align: center;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+    .notice-subscribe h3 { color: var(--white); margin-bottom: 10px; }
+    .notice-subscribe p { color: rgba(255,255,255,0.72); font-size: 14px; margin-bottom: 24px; line-height: 1.7; }
+    .notice-subscribe .social-row { justify-content: center; }
+    .notice-subscribe .social-link { background: rgba(255,255,255,0.12); }
+    .notice-subscribe .social-link:hover { background: rgba(255,255,255,0.22); }
+    @media (max-width: 640px) {
+      .notice-grid { grid-template-columns: 1fr; }
+      .notice-subscribe { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    Free shipping when you spend SGD 80 and above @ Studio! &nbsp;<a href="/studio/">Shop now →</a>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/images/TDNB-raw-logo-cropped.png" alt="Tee (DOT) Nail Bar">
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/studio/">Studio</a></li>
+        <li><a href="/#design-vault">The Design Vault</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/notices/" class="active">Notices</a></li>
+        <li><a href="/terms/">T&amp;Cs</a></li>
+        <li class="nav-cta"><a href="https://www.fresha.com/book-now/kjym092h/all-offer?share&pId=464679" target="_blank" rel="noopener">Book Now</a></li>
+      </ul>
+      <button class="hamburger" onclick="openMenu()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" onclick="closeMenu()">&times;</button>
+    <a href="/" onclick="closeMenu()">Home</a>
+    <a href="/services/" onclick="closeMenu()">Services</a>
+    <a href="/studio/" onclick="closeMenu()">Studio</a>
+    <a href="/#design-vault" onclick="closeMenu()">The Design Vault</a>
+    <a href="/about/" onclick="closeMenu()">About</a>
+    <a href="/blog/" onclick="closeMenu()">Blog</a>
+    <a href="/notices/" onclick="closeMenu()">Notices</a>
+    <a href="/terms/" onclick="closeMenu()">T&amp;Cs</a>
+    <a href="https://www.fresha.com/book-now/kjym092h/all-offer?share&pId=464679" class="btn btn-gold" target="_blank" rel="noopener">Book Now</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <span class="label">Stay in the loop</span>
+    <h1>Notices & Announcements</h1>
+    <p>Slot openings, festive schedules, policy reminders, and studio updates — all in one place.</p>
+  </div>
+
+  <!-- NOTICES -->
+  <section>
+    <div class="container">
+
+      <div class="notice-grid fade-in">
+
+        <!-- Notice 1 — Pinned -->
+        <div class="notice-card pinned">
+          <div class="notice-meta">
+            <span class="notice-tag schedule">Schedule</span>
+            <span class="notice-date">June 2025</span>
+            <span class="notice-pin">Pinned</span>
+          </div>
+          <h3>How to check for available slots</h3>
+          <p>Fresha shows a limited view of availability. Always check <strong>@teedotnailbar on Instagram</strong> first to see which dates and times are open before making a booking. Slots booked outside of open times will be cancelled.</p>
+          <a href="https://instagram.com/teedotnailbar" class="notice-link" target="_blank" rel="noopener">Follow on Instagram →</a>
+        </div>
+
+        <!-- Notice 2 -->
+        <div class="notice-card">
+          <div class="notice-meta">
+            <span class="notice-tag policy">Policy</span>
+            <span class="notice-date">June 2025</span>
+          </div>
+          <h3>Reminder: WhatsApp after booking on Fresha</h3>
+          <p>Fresha booking notifications can be unreliable. After securing a slot and paying your deposit, please <strong>WhatsApp +65 9669 1882</strong> within 1 hour to confirm your appointment. Bookings without a WhatsApp follow-up may not be seen.</p>
+          <a href="https://wa.me/6596691882?text=Hi!%20I've%20just%20booked%20on%20Fresha%20and%20paid%20my%20deposit%20" class="notice-link" target="_blank" rel="noopener">WhatsApp to confirm →</a>
+        </div>
+
+        <!-- Notice 3 -->
+        <div class="notice-card">
+          <div class="notice-meta">
+            <span class="notice-tag studio">Studio</span>
+            <span class="notice-date">2025</span>
+          </div>
+          <h3>Tee (DOT) Nail Bar Studio is now open</h3>
+          <p>Our press-on nails shop and masterclasses are live! Shop ready-to-wear and custom press-on sets, or join the <strong>Startup Manicure Masterclass</strong> or <strong>Basic E-File Masterclass</strong>. Free shipping on orders SGD 80 and above.</p>
+          <a href="/studio/" class="notice-link">Explore Studio →</a>
+        </div>
+
+        <!-- Notice 4 -->
+        <div class="notice-card">
+          <div class="notice-meta">
+            <span class="notice-tag update">Update</span>
+            <span class="notice-date">Ongoing</span>
+          </div>
+          <h3>Festive season slots — separate booking form</h3>
+          <p>During peak periods (Chinese New Year, Christmas, etc.), slots are released via a <strong>dedicated Google Form</strong> — not Fresha. Watch Instagram stories and highlights for the announcement when the form goes live.</p>
+          <a href="https://instagram.com/teedotnailbar" class="notice-link" target="_blank" rel="noopener">Watch @teedotnailbar →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STAY UPDATED -->
+  <section class="alt">
+    <div class="container">
+      <div class="notice-subscribe">
+        <h3>Stay updated</h3>
+        <p>New slots, promos, and announcements are posted first on Instagram and occasionally via our Studio channels. Follow along to be the first to know.</p>
+        <div class="social-row">
+          <a href="https://instagram.com/teedotnailbar" class="social-link" target="_blank" rel="noopener" title="Instagram">Instagram</a>
+          <a href="https://instagram.com/teedotnailbar.studio" class="social-link" target="_blank" rel="noopener" title="Studio Instagram">Studio IG</a>
+          <a href="https://wa.me/6596691882" class="social-link" target="_blank" rel="noopener" title="WhatsApp">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2018–2025 Tee (DOT) Nail Bar · Sembawang, Singapore</p>
+    <p style="margin-top:8px;">
+      <a href="/">Home</a> &nbsp;·&nbsp;
+      <a href="/services/">Services</a> &nbsp;·&nbsp;
+      <a href="/studio/">Studio</a> &nbsp;·&nbsp;
+      <a href="/about/">About</a> &nbsp;·&nbsp;
+      <a href="/blog/">Blog</a> &nbsp;·&nbsp;
+      <a href="/notices/">Notices</a> &nbsp;·&nbsp;
+      <a href="/terms/">T&amp;Cs</a> &nbsp;·&nbsp;
+      <a href="https://instagram.com/teedotnailbar" target="_blank" rel="noopener">Instagram</a>
+    </p>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a class="wa-float" href="https://wa.me/6596691882?text=Hi!%20I'd%20like%20to%20enquire%20about%20booking%20a%20nail%20appointment%20" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.544 4.056 1.492 5.765L0 24l6.374-1.467A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.782 9.782 0 01-5.007-1.378l-.36-.214-3.721.856.878-3.623-.237-.373A9.781 9.781 0 012.182 12C2.182 6.59 6.59 2.182 12 2.182S21.818 6.59 21.818 12 17.41 21.818 12 21.818z"/></svg>
+  </a>
+
+  <script>
+    function openMenu() { document.getElementById('mobileMenu').classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); document.body.style.overflow=''; }
+    const observer = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
