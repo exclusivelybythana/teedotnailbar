@@ -510,6 +510,3 @@ footer a:hover { color: var(--white); }
   .about-images img:first-child { height: 220px; }
   .page-hero { padding: 48px 24px; }
 }
-
-/* ============ TRUSTINDEX FEED FIX ============ */
-.ti-feed-widget img { visibility: visible !important; }
