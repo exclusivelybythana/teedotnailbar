@@ -369,6 +369,28 @@ nav.scrolled {
 
 /* ============ REVIEWS ============ */
 .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.google-reviews-live { margin-top: 48px; }
+.google-reviews-label {
+  text-align: center;
+  font-family: 'Noah', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 24px;
+  position: relative;
+}
+.google-reviews-label::before,
+.google-reviews-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 1px;
+  background: var(--cream-deep);
+}
+.google-reviews-label::before { left: calc(50% - 110px); }
+.google-reviews-label::after { right: calc(50% - 110px); }
 .review-card {
   background: var(--white);
   border-radius: var(--radius);
