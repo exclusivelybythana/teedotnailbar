@@ -506,6 +506,9 @@ footer a:hover { color: var(--white); }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
 /* ============ RESPONSIVE ============ */
+/* Safety net: never allow horizontal scroll on small screens */
+body { overflow-x: hidden; }
+
 @media (max-width: 900px) {
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid { grid-template-columns: repeat(2, 1fr); }
@@ -516,6 +519,7 @@ footer a:hover { color: var(--white); }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .gallery-item.tall { grid-row: span 1; }
   .gallery-item.tall img { height: 280px; }
+  .notice-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
   section { padding: 56px 0; }
@@ -525,10 +529,14 @@ footer a:hover { color: var(--white); }
   .reviews-grid { grid-template-columns: 1fr; }
   .studio-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr; }
+  .notice-grid { grid-template-columns: 1fr; }
   .pills-inner { flex-direction: column; gap: 8px; }
   .pill-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; justify-content: center; }
   .omakase-card { padding: 24px; }
   .studio-intro { padding: 32px 20px; }
   .about-images img:first-child { height: 220px; }
   .page-hero { padding: 48px 24px; }
+  /* Booking CTA buttons stack full-width for easy tapping */
+  .booking-options { flex-direction: column; }
+  .booking-options .btn { justify-content: center; }
 }
