@@ -97,7 +97,18 @@
     }
     .notice-subscribe h3 { color: var(--white); margin-bottom: 10px; }
     .notice-subscribe p { color: rgba(255,255,255,0.72); font-size: 14px; margin-bottom: 24px; line-height: 1.7; }
-    .notice-subscribe .social-row { justify-content: center; }
+    .notice-subscribe .social-row { justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .notice-subscribe .social-link {
+      width: auto; height: auto;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--white);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.18);
+    }
     .notice-subscribe .social-link { background: rgba(255,255,255,0.12); }
     .notice-subscribe .social-link:hover { background: rgba(255,255,255,0.22); }
     @media (max-width: 640px) {
@@ -203,11 +214,11 @@
     <div class="container">
       <div class="notice-subscribe">
         <h3>Stay updated</h3>
-        <p>New slots, promos, and announcements are posted first on Instagram and occasionally via our Studio channels. Follow along to be the first to know.</p>
+        <p>New slots, promos, and announcements are posted first on our Telegram channel &amp; Instagram. Follow along to be the first to know.</p>
         <div class="social-row">
-          <a href="https://instagram.com/teedotnailbar" class="social-link" target="_blank" rel="noopener" title="Instagram">Instagram</a>
-          <a href="https://instagram.com/teedotnailbar.studio" class="social-link" target="_blank" rel="noopener" title="Studio Instagram">Studio IG</a>
-          <a href="https://wa.me/6596691882" class="social-link" target="_blank" rel="noopener" title="WhatsApp">WhatsApp</a>
+          <a href="https://t.me/teedotnailbarcommunity" class="social-link" target="_blank" rel="noopener" title="Telegram @teedotnailbarcommunity">Telegram</a>
+          <a href="https://instagram.com/teedotnailbar" class="social-link" target="_blank" rel="noopener" title="Instagram @teedotnailbar">Instagram</a>
+          <a href="https://wa.me/6596691882" class="social-link" target="_blank" rel="noopener" title="WhatsApp +65 9669 1882">WhatsApp</a>
         </div>
       </div>
     </div>
